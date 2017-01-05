@@ -111,11 +111,11 @@ int main(int argc, char *argv[])
 
     initDB();
 
-    uint16_t server_port = 8080;
+    uint16_t server_port = 16000;
     if (argc > 1) {
         if (sscanf(argv[1], "%u", &server_port) == 0 || server_port > 65535) {
-            fprintf(stderr, "error: invalid command line argument, using default port 8080.\n");
-            server_port = 8080;
+            fprintf(stderr, "error: invalid command line argument, using default port 16000.\n");
+            server_port = 16000;
         }
     }
     Server *server = serverNew(server_port);
