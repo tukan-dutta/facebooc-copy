@@ -4,16 +4,42 @@ Proof-of-concept Facebook clone in C.
 The only dependency is SQLite3.
 
 # Prerequisites
-Install SQLite development package:
+
+**OS: Ubuntu**
+
+Install following  package:  
+
+  * build-essential
+  * make
+  * libsqlite3-dev
+  * sqlite3
+  
 ```bash
-sudo apt-get install libsqlite3-dev
+sudo apt-get update
+sudo apt-get install -yq build-essential make libsqlite3-dev sqlite3
 ```
 
-# Build and Run
+# Build
+
+Using git, clone the repository with the URL above. Repository contains the source files written in C, along with a Makefile with targets such as "all", "run". Destination path should be /opt/facebooc.
+Run the following command to compile the source code.make all
+
 ```bash
 cd facebooc
-make run
+make all
 ```
+
+# Run 
+
+Launch app as bin/facebooc This will attach to port 16000
+
+
+```bash
+cd facebooc
+bin/facebooc
+```
+
+
 
 Licensing
 ---------
